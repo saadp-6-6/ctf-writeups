@@ -1,1 +1,121 @@
+Category: General Skills
+Difficulty: easy(17) to medium(7) 24 small ctfs
+Platform: CyLab Security Academy
 
+_____________________________________________________________________________________________________________________________________________________________________
+
+Description:-
+This was the very 1st CTF on the platform which taught me about what CTF’s are and 
+how one should tackle solving different types of those it had 5 sections
+
+A. Section 1 included 3 questions
+
+1. obidient cat- basically we were asked to download and run a file named “file”
+                     on linux termianl using wget cmd and view its content with cat 
+                     file cmd to get the flag.
+
+2. Super SSH:  in this one we had to use ssh cmd  to login ourselves as ctfplayer 
+                   at port 49737 we were then asked to enter pswd to get the flag.
+
+3. what is net cat?: here we had to use nc which is a powerful networking utility 
+                         used for reading and writing data across network connections 
+                         using TCP or UDP protocol. We use this cmd to get the flag 
+                        from port 55525 for fickle.tempest.picoctf.net.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+B. Section 2 had 4 questions
+
+1. Mod 26: here we downloaded a file that had the flag encrypted in ROT13 format 
+           we used cyberchef to decode the flag msg.
+
+2. Warmed Up: here we had to convert 0x3D from hexadecimal to decimal we did it 
+                  with the help of cyberchef’s from hex to decimal.
+
+3. 2warm: here we converted 42(base 10) to binary (base 2).
+
+4. Bases: here we converted from Base64 to get the flag.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+C. Section 3 had 6 questions
+
+1. Wave a flag: we downaloded a file and granted it executable permissions by 
+                    using chmod +x cmd  and were able to access the flag by 
+                    ./warm -h cmd.
+
+2. Tab Tab attack: here we were asked to keep clicking on the file until the 
+                       end where the txt included the ctf.
+
+3. Insp3ct0r: we were asked to inspect a website’s source code which had the 
+                  ctf’s flag written as comments in 3 different files.
+4. strings it: a txt filed that had a lot of useless content stored in it we 
+                   had to find the ctf starting with “pico” using grep cmd.
+5. First grep: here also we used the grep cmd to get the flag from a txt file.
+6. where are the robots: here we were redirected to a website and then we had 
+                         to inspect the site to find the flag.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+D. Section 4 had 6 questions
+
+1. Python Wrangling: in this ctf we had to crack the pswd of file flag.txt.en 
+                     using python code of ende.py which we got from the file password.txt  
+                     we used the cmd python ende.py -d (decrypt) flag.txt.en. 
+
+2. PW crack 1: here the pswd for the file flag.txt is in the source code of the 
+               file level1.py we use the nano cmd to look at the pswd and then entered it.
+
+3. PW crack 2: here the pswd again is located in the source code of level2.py but 
+               here it is in the form of ASCII characters we converted it to normal 
+               characters to crack the pswd of flag.txt.
+
+4. PW crack 3: here there we multiple pswds stored in the sourrce code of levle3.py 
+               we tried every other pswd to see which one is the correct pswd for level3.flag.txt.enc.
+
+5. PW crack 4: there were 100 potiential pswds unlike the last one which had only 5 pswds
+               we had to try each n every one of them would have been a hard task so what we 
+               did is added a for loop in the source code of level4,py that would itself find 
+               the correct pswd of for the file level4.flag.txt.enc and provide us with the flag for this ctf.
+
+6. PW crack 5: here we have a file name dictionary.txt that has all the possible pswd combinations
+               we need to find the right now for level5.flag.txt.enc how do we do that? well first 
+               we have to remove the extra whitespaces from the dictionary file using .strip() 
+               in the source code of level5.py we use the code written below and then end the code with
+               level_%_pw_check(dictionary_as_a_list) this 
+                           `with open("dictionary.txt", "r") as f:
+                            for line in f:
+                             pw = line.strip()`
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Section 5 had 5 questions
+
+1. Enhance: in this we were redirected to a website where we zoomed in to get the ctf flag from the 
+            img on the site.
+
+2. Big Zip: a zip file with  hundereds of files we needed to find the one with picoCTF we did it 
+            using unzip -c big-zip-files.zip | grep "pico".
+
+3. vault-door-training: here we had the flag within the source code of the java file we used 
+                        cat VaultDoorTraining.java and found the code in return 
+                        password.equals("w4rm1ng_Up_w1tH_jAv4_000WWjzOMm7");
+
+4. keygenme-py: here the flag was withing the source code in 3 different parts as shown below our
+                task was to find the “xxxxxx” which was in hash format we imported hash library and 
+                sha256 to decode the pswd which was in hashing format then i compared the hash indexes with 
+                the pswd here to get the flag as "picoCTF{1n_7h3_kk3y_of_08c46aa4}
+
+                            key_part_static1_trial = "picoCTF{1n_7h3_kk3y_of_"
+                            key_part_dynamic1_trial = "xxxxxxxx"
+                            key_part_static2_trial = "}"
+                            key_full_template_trial = key_part_static1_trial + key_part_dynamic1_t>
+                            
+                            > import hashlib
+                            hashlib.sha256(b"BENNETT").hexdigest()
+                            '09820d032d73c31bd8f4a0532062a239d828a4da0951aeb66da928e843597e35'
+
+5 Binary Exploitation: we ran a cmd **nc saturn.picoctf.net 59841** here we typed AAAAAAAAAAAAAA which 
+                       made the code crash and gave us the result for the flag.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,1 +1,60 @@
+Category: General Skills
+Difficulty: 20 easy and small ctfs 
+Platform: CyLab Security Academy
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Description:-
+In this CTF module i learned about how basic scripting is done in linux to run files, unzip them to
+find the flag for a given CTF. Even though this module had 12 ctf that i had already done in The Beginner's
+Guide to the Challenge Library but the remaining 8 ctf’s still made me think for a moment. In this report 
+i will mention abt only those 8 ctf’s that i solved for the very first time.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Section 1 had 1 ctf 
+
+Lets Warm Up: In this ctf we were asked to convert 0x70 from hexadecimal to what it would be in ASCII code.
+              I did this with the help of Cybercheft by using from hexa tool the flag i got was picoCTF{p}.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Section 2 had 1 ctf 
+
+convertme.py: where we opent the python file “convertme.py” it asked us to convert 65 to binary form
+              i enterted the binary form of 65 to get the flag for this ctf.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Section 3 had 2 ctfs
+
+1. Nice netcat... : here we were told to type nc wily-courier.picoctf.net 52170 on the webshell which 
+                    generated the flag but the catch was it was in ASCII form so i used an online converter 
+                    to get the actual contents of the ctf flag.
+
+2. Magikarp Ground Mission: here we were told to login in as** ctf-player@wily-courier.picoctf.net on port 64446
+                              which redirected us to the ctf-player cli here on typing ls we had 2 files one had 1st
+                              part of the flag and other told us to use cd / to get to the 2nd part after using the 
+                              cmd i was redirected to the 2nd part and used the ls cmd to discover the 2nd part of  
+                              the ctf flag and the instructions to go to the 3rd and final part by typing cd ~ in the panel 
+                              which led me to open the 3rd and final file that contained the last part of the flag.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Section 4 had 1 ctf
+
+First Grep: here we were told to use the grep cmd to find the word “pico” that would lead us to the flag for this ctf.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Section 5 had 2 ctfs
+
+1. Static ain't always noise: here we had to unlock the file that included flag by using the cmd which dissembled the 
+                              file static.ltdis.strings.txt so we used the grep cmd on this file to find the flag.                                     
+                                        `chmod +x ltdis.sh
+                                         ./ltdis.sh static`
+    
+2. plumbing: here we were asked to run the site by using nc fickle-tempest.picoctf.net 59748 which opened a long list 
+             of lines so we used the grep cmd to find the flag for this ctf.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------

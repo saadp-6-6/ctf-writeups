@@ -19,7 +19,14 @@ Section 1- The Artifact Neuron consists of 4 ctfs
                   and were asked to write numbers between -10 and 10 and based on the number we 
                   entered the terminal would return either 1 (yes) or 0 (no) our goal is to make 
                   the terminal return the 1 or 0 in the pattern of “01110000” so we can get the 
-                  flag from the terminal it doesnt specify if the number entered should be only 
-                  entered once we can enter -1 twice and it will be counted.
+                  flag from the terminal it specifies if the number entered should be only 
+                  entered once and cannot be entered again immediately say we enter -1 twice and
+                  it will be counted keeping in mind it was not entered right after you entered it
+                  in the previous commit.
 
-2.
+2. Neuron Meet 2D-0: it follows the same rules as the last challenge but here we have to enter 2 
+                     numbers together from the range (-10,10) until we get the output pattern as
+                     "01110000" it also follows the same rule that the same input used once cannot
+                     be used as the very next input. 
+
+

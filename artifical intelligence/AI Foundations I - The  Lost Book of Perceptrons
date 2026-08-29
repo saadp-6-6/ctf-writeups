@@ -1,1 +1,25 @@
+Category: Artificial Intelligence
+Difficulty: 18 easy to medium ctfs
+Platform: CyLab Security Academy
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Description: 
+
+This CTF module consists of 18 CTFs which takes us through a lost book of perceptrons. 
+The year is 2030 and everyone uses AI and almost no one knows how to brainstrom or build 
+stuff on their own. This module taught us about the early pages of AI knowledge how neurons 
+work and how perceptrons are expressed and trained, and why responsible use matters.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Section 1- The Artifact Neuron consists of 4 ctfs
+
+1. Neuron Meet 0: here we ran the cmd nc aureolin-pixie.cylabacademy.net 53452 on our powershell 
+                  and were asked to write numbers between -10 and 10 and based on the number we 
+                  entered the terminal would return either 1 (yes) or 0 (no) our goal is to make 
+                  the terminal return the 1 or 0 in the pattern of “01110000” so we can get the 
+                  flag from the terminal it doesnt specify if the number entered should be only 
+                  entered once we can enter -1 twice and it will be counted.
+
+2.

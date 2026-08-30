@@ -29,4 +29,9 @@ Section 1- The Artifact Neuron consists of 4 ctfs
                      "01110000" it also follows the same rule that the same input used once cannot
                      be used as the very next input. 
 
+3. Neuron Express 0: this challenge taught us about the perceptron rule i.e. w*x+b>=0 so i ran inputs like
+                     0 and 1 and the output was stays quite but when i went with 2 3 5 it fired so i considered
+                     w=1 and b= -2 that gave me x-2>=0 now on assigning values to x like 0 and 1 the output was stays 
+                     quite as we got the result < 0 on but same x = 3 will fire the output.
+
 

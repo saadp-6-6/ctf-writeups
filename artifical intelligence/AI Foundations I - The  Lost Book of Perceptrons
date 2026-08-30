@@ -31,7 +31,21 @@ Section 1- The Artifact Neuron consists of 4 ctfs
 
 3. Neuron Express 0: this challenge taught us about the perceptron rule i.e. w*x+b>=0 so i ran inputs like
                      0 and 1 and the output was stays quite but when i went with 2 3 5 it fired so i considered
-                     w=1 and b= -2 that gave me x-2>=0 now on assigning values to x like 0 and 1 the output was stays 
-                     quite as we got the result < 0 on but same x = 3 will fire the output.
+                     w=1 and b= -2 that gave me x-2>=0 now on assigning values to x like 0 and 1 the output was
+                     stays quite as we got the result < 0 on but same x = 3 will fire the output.
 
+4. Neuron Express 2D-0: this is the same as the previous one but on a 2D plane here w1*x+w2*y+b>=0 so on trying x=2
+                        that didnt make the output fire but as i did x=3 the output started firing and y well it didnt 
+                        contribute much to change the classification. so the simplest equation was w1=1 w2=0 and b= -3
+                        giving equation as 1x+0-3>=0 ---> x>=3 the rule says >= 0, so (3, anything) fires exactly at 
+                        the boundary.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Section 2 consists of only 1 ctf
+
+Trust But Verify: This ctf walked us through a story of a high school kid whose geography assignment is due tomorrow and he 
+                  does have a clue where or what to start with he takes the help of his laptop's AI assistant and over the
+                  course of the story we see the ai commiting various mistakes be it wrong information or an edited code we
+                  see the kid fixing those and realising the use of AI should be done but also verified before trusting blindly.
 

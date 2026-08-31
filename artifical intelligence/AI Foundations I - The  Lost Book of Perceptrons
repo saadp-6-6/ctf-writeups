@@ -49,3 +49,20 @@ Trust But Verify: This ctf walked us through a story of a high school kid whose 
                   course of the story we see the ai commiting various mistakes be it wrong information or an edited code we
                   see the kid fixing those and realising the use of AI should be done but also verified before trusting blindly.
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Section 3 has 3 ctfs
+
+1. Perceptron Play 1D Alpha: here we were asked Tweak the weight and bias of a single-layer perceptron on a 1-dimensional
+                             number line. THE goal is to correctly classify every labeled point. Here we set the values of 
+                             w andb as 1 and -0.5 looking at the point x = 0 as 0.5 is positive, the perceptron predicts 1.
+                             We need the activation to become negative. If we change the bias to -0.5 it then preddicts 0.
+                             And other points work. So setting puts the decision boundary between 0 and +2, which correctly
+                             separates all the 0s from all the 1s.
+
+2. Perceptron Play Alpha: this was the same as the 1st ctf of this section except it was on a 2D plane here we set the values as 
+                          w1=1 w2=0 and b=-0.5 or say activation=x-0.5. we did not needt w2 as all the 0 pts were x<0 and 1 pts 
+                          had x>0. And b = -0.5 puts the boundary at: x - 0.5 = 0 → x = 0.5 So everything to the left is class 0,
+                          and everything to the right is class 1.
+
+

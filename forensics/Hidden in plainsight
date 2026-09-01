@@ -1,0 +1,23 @@
+Category:forensics
+Difficulty:easy
+Platform:Cylab Security Academy
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Description:
+You’re given a seemingly ordinary JPG image. Something is tucked away out of sight inside the file. 
+Your task is to discover the hidden payload and extract the flag.Download the jpg image here and read 
+its metadata.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Approach:
+On looking up the metada for img.jpg we find that the comment looks different on decoding it in Cyberchef
+we see an output steghide:cEF6endvcmQ=  on decoding the base64 we found the output as "pAzzword" we then install
+steghide on our webshell and use the command steghide extract -sf "img.jpg" -p "pAzzword" which then generates the
+flag for our ctf in flag.txt
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution:
+picoCTF{h1dd3n_1n_1m4g3_656e4d79}

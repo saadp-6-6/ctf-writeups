@@ -1,0 +1,25 @@
+Category:forensics
+Difficulty:easy
+Platform:Cylab Security Academy
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Description:
+The SOC team discovered a suspiciously large log file after a recent breach. When they opened it, 
+they found an enormous block of encoded text instead of typical logs. Could there be something hidden within?
+Your mission is to inspect the resulting file and reveal the real purpose of it. The team is relying on your 
+skills to uncover any concealed information within this unusual log.Download the encoded data here: Logs Data
+Be prepared—the file is large, and examining it thoroughly is crucial. Use base64 to decode the data and generate
+the image file.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Approach:
+As mentioned in the description we are asked to decode the file using Cyberchef's base64 after using Base64 we find that
+an image with hexadecimal value is generated upon copying and pasting that hex code we are given the flag of this ctf as
+an output.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution:
+picoCTF{forensics_analysis_is_amazing_ac1e3584}

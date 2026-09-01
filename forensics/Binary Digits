@@ -1,0 +1,21 @@
+Category:forensics
+Difficulty:easy
+Platform:Cylab Security Academy
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Description:
+This file doesn't look like much... just a bunch of 1s and 0s. But maybe it's not just random noise. Can you recover anything meaningful from this?
+After downloading the file you will see nothing but binarys of 0's and 1's.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Approach:
+This file we can open it in cyberchef and use the magic button to get the output and we get the ctf flag.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution:
+picoCTF{h1dd3n_1n_th3_b1n4ry_67bd9b59}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------

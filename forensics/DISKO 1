@@ -1,0 +1,25 @@
+Category:forensics
+Difficulty:easy
+Platform:Cylab Security Academy
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Description:
+Can you find the flag in this disk image?
+Download the disk image here
+
+Hints
+1 Maybe Strings could help? If only there was a way to do that?
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Approach:
+the file disko-1.dd.gz on opening it using say cat cmd the the webshell gets exahaused and reconnects. 
+In such a case we should take the contents of the file and make a zip file by using gunzip disko-1.dd.gz
+now as the hint suggests to use the strings function along with the grep cmd to get the output as the flag 
+the cmd we use here is strings disko-1.dd | grep picoCTF we get the ctf flag.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution:
+picoCTF{1t5_ju5t_4_5tr1n9_be6031da}

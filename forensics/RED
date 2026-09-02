@@ -1,0 +1,31 @@
+Category:forensics
+Difficulty:easy
+Platform:Cylab Security Academy
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Description:
+RED, RED, RED, RED
+Download the image: red.png
+Hints
+1 The picture seems pure, but is it though?
+2 Red?Ged?Bed?Aed?
+3 Check whatever Facebook is called now.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Approach:
+As it says in the description itself to chek the metadata of this png on checking the metadata we see a poem:
+"Crimson heart, vibrant and bold, Hearts flutter at your sight. Evenings glow softly red, Cherries burst with sweet life. 
+Kisses linger with your warmth. Love deep as merlot. Scarlet leaves falling softly, Bold in every stroke."
+If we see the first the letters of this poem are in capital on adding them to getter we get CHECK LSB. LSB also
+known as 'Least Significant Bit' is a method of hiding data within the least significant bits of pixel values in an
+image commonly used in steganography. we need to install zsteg using the cmd "gem install --user-install zsteg". 
+Upon using zsteg red.png we see the LSB of the png file there is a text in base64 format which on converting in 
+Cybberchef we get the flag as the output.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution:
+picoCTF{r3d_1s_th3_ult1m4t3_cur3_f0r_54dn355_}
+

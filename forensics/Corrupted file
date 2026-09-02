@@ -1,0 +1,29 @@
+Category:forensics
+Difficulty:easy
+Platform:Cylab Security Academy
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Description:
+This file seems broken... or is it? Maybe a couple of bytes could make all the difference. Can you figure out how to bring it back to life?
+Download the file here
+Hints
+1 Try checking the file’s header.
+2 JPEG
+3 Tools like xxd or hexdump can help you inspect and edit file bytes.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Approach:
+upon downloading the file we use the cmd file file to get output as data then we use the hexdump -C file | head -5 and see the firts line as JFIF 
+hex code this hexcode we need to correct the 1st 2 bytes of the file by using the cmd (printf '\xff\xd8' && tail -c +3 file) > repair.jpeg
+this repair.jpg is in unreadable form so we need to convert it to base64 by using base64 -w 0 repair.jpeg > repair.b64 use the cat cmd to get the 
+base 64 and copy the content of that base64 paste it in cyberchef and it generates the raw img as the output.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution:
+picoCTF{r3st0r1ng_th3_by73s_0e8fb0ec}
+
+
+

@@ -1,0 +1,27 @@
+Category:forensics
+Difficulty:easy
+Platform:Cylab Security Academy
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Description:
+
+How about some hide and seek?
+Download this file here.
+
+Hints
+1. How can you view the information about the picture?
+2. If something isn't in the expected form, maybe it deserves attention?
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Approach:
+
+This is a pretty basic ctf here upon viewing the metadata of the extracted jpg file we 
+find that attribution_url:cGljb0NURntNRTc0RDQ3QV9ISUREM05fZDhjMzgxZmR9Cg== is in b64
+so upon using cyberchef we find the output to be the flag for this ctf.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution:
+picoCTF{ME74D47A_HIDD3N_d8c381fd}

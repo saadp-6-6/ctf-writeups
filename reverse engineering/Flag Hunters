@@ -1,0 +1,39 @@
+Category:reverse engineering
+Difficulty:easy
+Platform:Cylab Security Academy
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Description:
+
+Lyrics jump from verses to the refrain kind of like a subroutine call. There's a hidden refrain this program
+doesn't print by default. Can you get it to print it? There might be something in it for you.
+The program's source code can be downloaded here
+Connect to the program with netcat:
+$ nc verbal-sleep.picoctf.net 64833
+
+Hints
+1. This program can easily get into undefined states. Don't be shy about Ctrl-C.
+2. Unsanitized user input is always good, right?
+3. Is there any syntax that is ripe for subversion?
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Approach:
+
+on downloading and running the python source code i found this one snippet that made me think:
+                             secret_intro = \
+                            '''Pico warriors rising, puzzles laid bare,
+                            Solving each challenge with precision and flair.
+                            With unity and skill, flags we deliver,
+                            The ether’s ours to conquer, '''\
+                            + flag + '\n' 
+Here this secret intro i what we need to break to get the flag for the ctf. So as i launched the instance it
+started executing the lyrics of the song and when it stops on crowd we have to enter our input  here enter 
+";RETURN 0" it resets the line pointer to line 0 where the secret intro and flag are stored, making the program
+print the hidden text.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution:
+picoCTF{70637h3r_f0r3v3r_c373964d}

@@ -1,0 +1,21 @@
+Difficulty:easy
+Category:reverse engineering
+Platform: Cylab Security Academy 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Description:
+I wonder what this really is...enc.join([chr((ord(flag[i]) << 8) + ord(flag[i + 1])) for i in range(0, len(flag), 2)])
+
+Hints:
+1. You may find some decoders online
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------  
+
+Approach:
+Upon openin this file in the webshell it had some text written in mandarin on translation we got the text to be the ctf flag.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                         
+Solution:
+picoCTF{16_bits_inst34d_of_8_b7f62ca5}                                         

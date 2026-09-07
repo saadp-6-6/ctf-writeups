@@ -1,0 +1,31 @@
+Category:genera skills
+Difficulty:easy
+Platform:Cylab Security Academy
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Description:
+
+Can you reverse a series of Linux text transformations to recover the original flag?
+Start searching for the flag here nc foggy-cliff.picoctf.net 53253
+
+Hints:
+1. For text translation and character replacement, see 
+trcommand documentation
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Approach:
+
+On running the instance on the webshell we get displayed with the flag but here it is in base64 format so we had to 
+run different cmds to convert this flag to its normal form:
+1. base64 -d to convert it to ")p6981ppq-fa01g@ze0sfa4eG-gk3g-ta1ferirE(SGPbpvc"
+2. we have to reverse the current flag using rev cmd to get the next flag as cvpbPGS(Eriref1at-g3kg-Ge4afs0ez@g10af-qpp1896p)
+3. we were asked to then change the '-' to '_' using tr cmd 
+4. now we were asked to convert the '()' to '{}' using the same tr cmd to get the flag as cvpbPGS{Eriref1at_g3kg_Ge4afs0ez@g10af_qpp1896p}
+5. the final part was to convert this ROT13 format flag to readable form using tr 'a-zA-Z' 'n-za-mN-ZA-M' to get final flag
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution:
+picoCTF{Revers1ng_t3xt_Tr4nsf0rm@t10ns_dcc1896c}

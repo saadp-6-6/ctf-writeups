@@ -1,0 +1,31 @@
+Category:general skills
+Difficulty:easy
+Platform:Cylab Security Academy
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Description:
+
+I have built my own Git server with my own rules! You can clone the challenge repo using the command below.
+git clone ssh://git@foggy-cliff.picoctf.net:51588/git/challenge.git
+Here's the password: 4f7061f2
+Check the README to get your flag!
+Hints
+1. How do you specify your Git username and email?
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Approach:
+
+On running the instance and then checking the shell we see a new directory named "challenge" added that has README.md file
+this file can only be accessed by pushing flag.txt by ``root:root@picoctf``` that will update the flag. We then create new file named flag.txt 
+containing any text, then stage and commit it:
+                                                echo "give me the flag" > flag.txt
+                                                git add flag.txt
+                                                git commit -m "Requesting flag as root"
+Lastly we push new commit back to the picoCTF server by using "git push origin master" to genrate the flag
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution:
+picoCTF{1mp3rs0n4t4_g17_345y_220a9833}

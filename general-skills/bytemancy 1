@@ -1,0 +1,27 @@
+Category:general skills
+Difficulty:easy
+Platform:Cylab Security Academy
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Description:
+
+Can you conjure the right bytes? The program's source code can be downloaded here.
+Connect to the program with netcat:
+$ nc foggy-cliff.picoctf.net 65501
+Hints:
+1. No copy-pasta, please - use Python!
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Approach:
+
+This flag provided us with the source code of the same in here the main line is "if user_input == "\x65"*1751:" 
+here x65 is hexadecimal notation of e therefore x65*1751 is equal to e*1751 so ofcourse typing e 1700+ times is
+very hectic so here we use the cmd  on webshell "python -c 'print("e"*1751)' | nc foggy-cliff.picoctf.net 65501"
+which then display's the flag for this ctf.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution:
+picoCTF{h0w_m4ny_e's???_b6277f00}

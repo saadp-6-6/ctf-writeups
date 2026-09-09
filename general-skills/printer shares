@@ -1,0 +1,28 @@
+Category:forensics
+Difficulty:easy
+Platform:Cylab Security Academy
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Description:
+
+Oops! Someone accidentally sent an important file to a network printer—can you retrieve it from the print server?
+The printer is on 59308. You can try $ nc -vz mysterious-sea.picoctf.net 59308
+Hints:
+1. knowing how SMB protocol works would be helpful!
+2. smbclient and smbutil are good tools
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Approach:
+
+As the hint suggests us to run smbclient we check for the List available shares on servers with anonymous access
+using cmd "smbclient -L //mysterious-sea.picoctf.net -p 59308 -N" this showed us the list that containted Shares
+and IPC we then connect to Shares using "smbclient //mysterious-sea.picoctf.net/shares -p 59308 -N" which opens 
+us a cmd line here we type "get flag.txt" to get the flag then exit to the main webshell and cat flag.txt to 
+get the ctf's flag.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution:
+picoCTF{5mb_pr1nter_5h4re5_8a0df8e0}

@@ -1,0 +1,36 @@
+Category:forensics
+Difficulty:medium
+Platform:Cylab Security Academy
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Description:
+
+A suspicious cell tower has been detected in the network. Analyze the captured network traffic to identify the rogue tower, 
+find the compromised device, and recover the exfiltrated flag.Download the network capture file: here
+
+Hints
+1. Look for unauthorized test network broadcasts on UDP port 55000
+2. Find the device that connected to the rogue tower by checking HTTP User-Agent headers
+3. The encryption key is derived from the victim device's IMSI
+4. The exfiltrated data is split across multiple HTTP POST requests
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Approach:
+
+As the hint tells us to look for unauthorized test network broadcasts on UDP port 55000, i find the log which showed us the
+PLMN=00101 and CELL ID=90461. Next after viewing the http traffic i found the  following:
+victim IP- 10.100.123.69 
+IMSI: 310410 371385969 
+Cell: 25262
+As the device was connected to the rogue cell ID, this identified the compromised device. After http's multiple POST requests 
+to /upload were found. the last bits of these logs when concatenated it forms a b64 that is "Q15TWnpifkxBB1dACmlbBF9bb0EJQQtFbAQBBQ1QXAEASg=="
+but ofc i cant be decoded until the encryption key is derived from the victim device's IMSI. but however on typing IMSI: 310410 371385969 
+in the XOR I was not able the flag so insted i wrote "picoCTF{" which gave me "37059687" as part of output. I typed this in the XOR box and
+got the ctf flag .
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution:
+picoCTF{r0gu3_c3ll_t0w3r_3104fd63}

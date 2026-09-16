@@ -1,0 +1,42 @@
+Category:forensics
+Difficulty:easy
+Platform:Cylab Security Academy
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Description:
+
+A message has been encrypted using RSA. The public key is gone… but someone might have been careless with the private key.
+Can you recover it and decrypt the message?
+Download the flag and image
+
+Hints
+1. Metadata can tell you more than you expect.
+2. Hex can be turned back into a key file
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Approach:
+
+As the hints suggest us to view the metadata for the jpg we find this comment:-
+2d2d2d2d2d424547494e2050524956415445204b45592d2d2d2d2d0a4d494945766749424144414e42676b71686b6947397730424151454641415343424b6
+7776767536b41674541416f494241514379567a46575a4e6c4b4f72594b0a795946596837366f6d4255476d526f4a744d415974664d3747317a5951763530
+4a6771784e43596d79643356314755777742312f73386b6d57544b3775616f380a714e316f50714e6d4a4c72576a4b64614e65455649344e544a59644c457
+a4c34494e4d6852354c7a376f766a73326a595676734e66644f6d76496a3054622f4c0a574875742b6d704343695876584d474f506e33422b33524e787232
+
+This hexadecimal data is the isolated using exiftool the following cmd was ued to automate this extraction:-
+exiftool -Comment image.jpg | cut -d ‘:’ -f2 > key.hex
+
+This hexadecimal data needs to be converted back into its original binary format using xxd utility and the cmd:
+xxd -r -p key.hex > pvt_key.pem
+-r reverses the hex dump while -p tells the program to interpret data as plain hexadecimal. this was then saved as pvt_key.pem.
+On using "cat pvt_key.pem" the output is shown as a standerd PEM beginning with -----BEGIN PRIVATE KEY----- and ending with 
+-----END PRIVATE KEY-----
+
+Now we need to decrypt the flag.enc using OpenSSL as it has functions for doing RSA encryption and decryption operations using cmd:-
+openssl rsautl -decrypt -inkey private_key.pem -in flag.enc
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution:
+picoCTF{rs4_k3y_1n_1mg_ce170c3d}

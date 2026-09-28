@@ -1,0 +1,44 @@
+Category:cryptography
+Difficulty:easy
+Platform:Cylab Security Academy
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Description:
+
+A company stored a secret message on a server which got breached due to the admin using weakly hashed passwords.
+Can you gain access to the secret stored within the server?
+
+ nc chatelaine.cylabacademy.net 32652
+
+Hints
+1. Understanding hashes is very crucial. Read more here
+2. Can you identify the hash algorithm? Look carefully at the length and structure of each hash identified.
+3. Tried using any hash cracking tools?
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Approach:
+
+Typing  nc chatelaine.cylabacademy.net 32652 generates:
+        We have identified a hash: 482c811da5d5b4bc6d497ffa98491e38
+        Enter the password for identified hash: 
+This is a md5 type of hash as it consists of 32 hexadecimal characters as md5 doesnt use automatic cryptographic salting
+so reversing specific hash instantly maps back to the string password123.
+
+next we are provided with:
+        Flag is yet to be revealed!! Crack this hash: b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3
+        Enter the password for the identified hash:
+Thos is a 40 hexadecimal character has which clarifies that it is SHA1 type of hash just like MD5 this hash also has common
+dictionary phrases are highly vulnerable to precomputed lookup databases. the unencrpyted form was letmein.
+
+the last has we got :
+        Almost there!! Crack this hash: 916e8c4f79b25028c9e467f1eb8eee6d6bbdff965f9928310ad30a8d88697745
+        Enter the password for the identified hash: 
+This being a 64 hexa hash confirms to be sha256 which is mathematically stronger and more complex than the last 2 which on 
+cracking gave the output as qwerty098 and thus we got our flag 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution:
+academy{UseStr0nG_h@shEs_&PaSswDs!_35c6b1f4}
